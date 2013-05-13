@@ -39,7 +39,7 @@ class SymfonyCmfBlogExtension extends Extension
 
         foreach ($config['class'] as $type => $classFqn) {
             $container->setParameter(
-                $param = sprintf('symfony_cmf_blog.%s_class', $type),
+                $param = sprintf('cmf_blog.%s_class', $type),
                 $classFqn
             );
         }

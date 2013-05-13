@@ -29,7 +29,7 @@ class TagCloudBlockService extends BaseBlockService
     public function getDefaultSettings()
     {
         return array(
-            'path' => 'symfony_cmf_blog_post_index'
+            'path' => 'cmf_blog_post_index'
         );
     }
 
