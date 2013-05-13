@@ -25,7 +25,7 @@ class PostAdmin extends Admin
         //        but I don't know how integrate the form
         //        AND have all the Sonata magic from the
         //        FormMapper->add method.
-        
+
         // $csvToArrayTransformer = new CsvToArrayTransformer;
 
         $mapper->add('title');
@@ -33,13 +33,13 @@ class PostAdmin extends Admin
             'widget' => 'single_text',
         ));
 
-        // @todo: Make these choicess configurable somehow
-        $mapper->add('status', 'choice', array(
-            'choices' => array(
-                'draft' => 'Draft',
-                'published' => 'Published',
-            ),
-        ));
+        // @todo: obsolete: moved to extension
+//        $mapper->add('status', 'choice', array(
+//            'choices' => array(
+//                'draft' => 'Draft',
+//                'published' => 'Published',
+//            ),
+//        ));
         $mapper->add('body', 'textarea');
         $mapper->add('blog', 'phpcr_document', array(
             'class' => 'Symfony\Cmf\Bundle\BlogBundle\Document\Blog',

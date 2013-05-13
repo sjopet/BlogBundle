@@ -3,6 +3,7 @@
 namespace Symfony\Cmf\Bundle\BlogBundle\Document;
 
 use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
+use Symfony\Cmf\Bundle\BlogBundle\Publishing\PublishableInterface;
 use Symfony\Cmf\Bundle\BlogBundle\Util\PostUtils;
 use Symfony\Cmf\Bundle\BlogBundle\Tagging\Tag;
 use Symfony\Cmf\Component\Routing\RouteAwareInterface;
@@ -12,7 +13,7 @@ use Symfony\Cmf\Component\Routing\RouteAwareInterface;
  *
  * @author Daniel Leech <daniel@dantleech.com>
  */
-class Post implements RouteAwareInterface
+class Post implements RouteAwareInterface, PublishableInterface
 {
     /**
      * ID / Path to to this object
@@ -51,7 +52,7 @@ class Post implements RouteAwareInterface
 
     /**
      * Date of publication
-     * @var DateTime
+     * @var \DateTime
      */
     protected $date;
 
